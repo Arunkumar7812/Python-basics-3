@@ -1,9 +1,7 @@
-arr = list(map(int, input("Enter the elements: ").split()))
-
-result = [arr[0]]
-
-for i in range(1, len(arr)):
-    if arr[i] != arr[i-1]:
-        result.append(arr[i])
-
-print("After removing consecutive duplicates:", result)
+nums=list(map(int,input().split()))
+l=[]
+for i in range(len(nums)-1):
+  if nums[i]!=nums[i+1]:
+    l.append(nums[i])
+l.append(nums[-1])
+print(l)

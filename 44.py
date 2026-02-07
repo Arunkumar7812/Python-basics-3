@@ -1,7 +1,12 @@
-def co_occurrence(sentence):
-    w=sentence.split()
-    d={}
-    for i in range(len(w)-1):
-        p=(w[i],w[i+1])
-        d[p]=d.get(p,0)+1
-    return d
+# 44. Word Co-Occurrence Counter
+sentence = input("Enter a sentence: ")
+words = sentence.split()
+
+freq = {}
+
+for i in range(len(words) - 1):
+    pair = (words[i], words[i+1])
+    freq[pair] = freq.get(pair, 0) + 1
+
+print("Word co-occurrence counts:")
+print(freq)

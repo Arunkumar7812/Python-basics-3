@@ -1,15 +1,11 @@
-r = int(input("Enter rows: "))
-c = int(input("Enter columns: "))
+rows = int(input("Enter number of rows: "))
 
 matrix = []
-for i in range(r):
-    row = list(map(int, input(f"Enter row {i+1}: ").split()))
+
+for i in range(rows):
+    row = list(map(int, input(f"Enter elements of row {i+1}: ").split()))
     matrix.append(row)
-
-col_sum = [0] * c
-
-for i in range(r):
-    for j in range(c):
-        col_sum[j] += matrix[i][j]
-
-print("Column sums:", col_sum)
+z=zip(*matrix)
+print("Row-wise maximums:")
+for row in z:
+    print(sum(row))

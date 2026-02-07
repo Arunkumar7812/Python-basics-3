@@ -1,13 +1,13 @@
-arr = list(map(int, input("Enter the elements: ").split()))
+nums = list(map(int, input("Enter numbers: ").split()))
+
 leaders = []
+max_so_far = float('-inf')
 
-max_right = arr[-1]
-leaders.append(max_right)
-
-for i in range(len(arr) - 2, -1, -1):
-    if arr[i] > max_right:
-        max_right = arr[i]
-        leaders.append(arr[i])
+for i in range(len(nums)-1, -1, -1):
+    if nums[i] > max_so_far:
+        leaders.append(nums[i])
+        max_so_far = nums[i]
 
 leaders.reverse()
+
 print("Leader elements:", leaders)

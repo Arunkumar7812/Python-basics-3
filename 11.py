@@ -1,9 +1,9 @@
+# 11. Tuple Swap
+t = tuple(input("Enter two elements separated by space: ").split())
 
-a = input("Enter first value: ")
-b = input("Enter second value: ")
-
-t = (a, b)
-
-t = (t[1], t[0])
-
-print("Swapped tuple:", t)
+if len(t) != 2:
+    print("Tuple must have exactly two elements")
+else:
+    a, b = t
+    swapped = (b, a)
+    print("Swapped tuple:", swapped)

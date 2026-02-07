@@ -1,3 +1,7 @@
-def unique_words(text):
-    return len(set(text.lower().split()))
-
+# 14. Unique Word Counter
+words=input().split()
+s=set()
+for i in words:
+  if i not in s:
+    s.add(i)
+print(s)

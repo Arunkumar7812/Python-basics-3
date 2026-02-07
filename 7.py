@@ -1,8 +1,12 @@
-nested = eval(input("Enter the nested list: "))
-flat = []
+n = int(input("Enter number of rows: "))
 
-for sublist in nested:
-    for item in sublist:
-        flat.append(item)
+nums=[]
+for i in range(n):
+  row = list(map(int, input(f"Enter row {i+1}: ").split()))
+  nums.append(row)
 
-print("Flattened list:", flat)
+l=[]
+for i in nums:
+  for j in i:
+    l.append(j)
+print(l)
